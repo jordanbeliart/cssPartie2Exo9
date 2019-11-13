@@ -1,75 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
+    <!-- charset utf-8 pour les caractères accentués français -->
     <meta charset="utf-8" />
     <title>Le Soupeur Formuleur</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <form action="index.html" method="post">
-      <fieldset id="Blue">
-        <legend id="Blue">Votre identité</legend>
+    <!-- formulaire: deux attributs obligatoires >>> action et method -->
+    <form action="#" method="post">
+      <fieldset id="solidBlue">
+        <legend id="solidBlue">Votre identité</legend>
           <div>
             <ol>
               <li>
                 <label for="name">Nom :</label>
-                <input type="text" name="user_name" placeholder="Nom" />
+                <input id="name" type="text" name="name" placeholder="Nom" />
+                <!-- toujours mettre un id dans un input -->
               </li>
               <li>
                 <label for="firstName">Prénom :</label>
-                <input type="text" name="user_firstName" placeholder="Prénom" />
+                <input id="firstName" type="text" name="firstName" placeholder="Prénom" />
               </li>
               <li>
                 <label for="mail">Adressse mail :</label>
-                <input type="email" name="user_mail" placeholder="Adresse mail" />
+                <input id="mail" type="email" name="mail" placeholder="martin.dupont@gmail.com" size="25"/>
               </li>
             </ol>
           </div>
       </fieldset>
-      <fieldset id="Violet">
-        <legend id="Violet">Adresse de livraison</legend>
+      <fieldset id="solidViolet">
+        <legend id="solidViolet">Adresse de livraison</legend>
           <div>
             <ol>
               <li>
-                <label for="adress">Adresse :</label>
-                <input type="text" name="user_adress" id="adress" />
+                <label for="address">Adresse :</label>
+                <textarea id="address" name="adresse" rows="4" cols="25" placeholder="Adresse"></textarea>
               </li>
               <li>
                 <label for="zipCode">Code postal :</label>
-                <input type="text" name="user_zipCode" placeholder="Code postal" />
+                <input id="zipCode" type="text" name="zipCode" placeholder="Code postal" />
               </li>
               <li>
                 <label for="city">Ville :</label>
-                <input type="text" name="user_city" placeholder="Ville" />
+                <input id="city" type="text" name="city" placeholder="Ville" />
               </li>
             </ol>
           </div>
       </fieldset>
-      <fieldset id="Pink">
-        <legend id="Pink">Informations de règlement</legend>
+      <fieldset id="solidPink">
+        <legend id="solidPink">Informations de règlement</legend>
           <div>
             <ol>
               <li>
                 <label for="cardType">Type de carte bancaire :</label>
-                  <div><input type="radio" name="user_cardType" />VISA</div>
-                  <div><input type="radio" name="user_cardType" />Mastercard</div>
+                <ul>
+                  <li>
+                    <input id="cardTypeVisa" type="radio" name="cardType" />VISA
+                  </li>
+                  <li>
+                    <input id="cardTypeMaster" type="radio" name="cardType" />MasterCard
+                  </li>
+                </ul>
               </li>
               <li>
                 <label for="cardNumber">Numéro de carte :</label>
-                <input type="text" name="user_cardNumber" placeholder="Numéro de carte" />
+                <input id="cardNumber" type="text" name="cardNumber" placeholder="Numéro de carte" />
               </li>
               <li>
                 <label for="securityCode">Code de sécurité :</label>
-                <input type="text" name="user_securityCode" placeholder="Code de sécurité" />
+                <input id="securityCode" type="text" name="securityCode" placeholder="Code de sécurité" />
               </li>
               <li>
                 <label for="holder">Nom du titulaire :</label>
-                <input type="text" name="user_holderName" placeholder="Nom du titulaire" />
+                <input id="holder" type="text" name="holderName" placeholder="Nom du titulaire" />
               </li>
             </ol>
           </div>
       </fieldset>
+      <!-- 4 exemples de création de bouton : privilégier la version "button2" pour un formulaire -->
       <button type="button" name="button">J'achète !</button>
+      <input type="button" name="button1" id="button1" value="Take my money !" />
+      <input type="submit" name="button2" id="button2" value="Katching!">
+      <button type="submit" name="button3">Je le prends !</button>
     </form>
   </body>
 </html>

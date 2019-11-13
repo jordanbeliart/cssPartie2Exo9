@@ -1,13 +1,18 @@
-#Blue {
+/* changer la couleur de chaque section */
+#solidBlue {
   background: #2474a9;
 }
-#Violet {
+#solidViolet {
   background: #9a12b4;
 }
-#Pink {
+#solidPink {
   background: #db0a5b;
 }
-#adress {
-  height: 5em;
-  vertical-align: bottom;
+ul {
+  list-style-type: none;
+  /* enlève les puces par défaut */
+}
+textarea {
+  resize: none;
+  /* empêche la possibilité de recadrage manuel de la textarea */
 }
